@@ -11,6 +11,10 @@
 
 }
 
+.toc-tree__nodes-list {
+    margin-bottom: 12px;
+    list-style: none;
+}
 
 .nav .nav__toc {
     -webkit-animation: fade-in .3s ease-out forwards;
@@ -87,4 +91,356 @@
     cursor: default;
     color: #343434;
     background: #f0f0f0;
+}
+
+.toc-tree__node--level_0 .toc-tree__title {
+    padding-left: 26px
+}
+
+.toc-tree__node--level_0 .toc-tree__anchor .toc-tree__title {
+    padding-left: 46px
+}
+
+.toc-tree__node--level_0 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 66px
+}
+
+.toc-tree__node--level_0 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 86px
+}
+
+.toc-tree__node--level_0 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 106px
+}
+
+.toc-tree__node--level_0 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 126px
+}
+
+.toc-tree__node--level_0 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 146px
+}
+
+.toc-tree__node--level_0 .toc-tree__expander {
+    left: 3px
+}
+
+.toc-tree__node--level_1 .toc-tree__title {
+    padding-left: 46px
+}
+
+.toc-tree__node--level_1 .toc-tree__anchor .toc-tree__title {
+    padding-left: 66px
+}
+
+.toc-tree__node--level_1 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 86px
+}
+
+.toc-tree__node--level_1 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 106px
+}
+
+.toc-tree__node--level_1 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 126px
+}
+
+.toc-tree__node--level_1 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 146px
+}
+
+.toc-tree__node--level_1 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 166px
+}
+
+.toc-tree__node--level_1 .toc-tree__expander {
+    left: 23px
+}
+
+.toc-tree__node--level_2 .toc-tree__title {
+    padding-left: 66px
+}
+
+.toc-tree__node--level_2 .toc-tree__anchor .toc-tree__title {
+    padding-left: 86px
+}
+
+.toc-tree__node--level_2 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 106px
+}
+
+.toc-tree__node--level_2 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 126px
+}
+
+.toc-tree__node--level_2 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 146px
+}
+
+.toc-tree__node--level_2 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 166px
+}
+
+.toc-tree__node--level_2 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 186px
+}
+
+.toc-tree__node--level_2 .toc-tree__expander {
+    left: 43px
+}
+
+.toc-tree__node--level_3 .toc-tree__title {
+    padding-left: 86px
+}
+
+.toc-tree__node--level_3 .toc-tree__anchor .toc-tree__title {
+    padding-left: 106px
+}
+
+.toc-tree__node--level_3 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 126px
+}
+
+.toc-tree__node--level_3 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 146px
+}
+
+.toc-tree__node--level_3 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 166px
+}
+
+.toc-tree__node--level_3 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 186px
+}
+
+.toc-tree__node--level_3 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 206px
+}
+
+.toc-tree__node--level_3 .toc-tree__expander {
+    left: 63px
+}
+
+.toc-tree__node--level_4 .toc-tree__title {
+    padding-left: 106px
+}
+
+.toc-tree__node--level_4 .toc-tree__anchor .toc-tree__title {
+    padding-left: 126px
+}
+
+.toc-tree__node--level_4 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 146px
+}
+
+.toc-tree__node--level_4 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 166px
+}
+
+.toc-tree__node--level_4 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 186px
+}
+
+.toc-tree__node--level_4 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 206px
+}
+
+.toc-tree__node--level_4 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 226px
+}
+
+.toc-tree__node--level_4 .toc-tree__expander {
+    left: 83px
+}
+
+.toc-tree__node--level_5 .toc-tree__title {
+    padding-left: 126px
+}
+
+.toc-tree__node--level_5 .toc-tree__anchor .toc-tree__title {
+    padding-left: 146px
+}
+
+.toc-tree__node--level_5 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 166px
+}
+
+.toc-tree__node--level_5 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 186px
+}
+
+.toc-tree__node--level_5 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 206px
+}
+
+.toc-tree__node--level_5 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 226px
+}
+
+.toc-tree__node--level_5 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 246px
+}
+
+.toc-tree__node--level_5 .toc-tree__expander {
+    left: 103px
+}
+
+.toc-tree__node--level_6 .toc-tree__title {
+    padding-left: 146px
+}
+
+.toc-tree__node--level_6 .toc-tree__anchor .toc-tree__title {
+    padding-left: 166px
+}
+
+.toc-tree__node--level_6 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 186px
+}
+
+.toc-tree__node--level_6 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 206px
+}
+
+.toc-tree__node--level_6 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 226px
+}
+
+.toc-tree__node--level_6 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 246px
+}
+
+.toc-tree__node--level_6 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 266px
+}
+
+.toc-tree__node--level_6 .toc-tree__expander {
+    left: 123px
+}
+
+.toc-tree__node--level_7 .toc-tree__title {
+    padding-left: 166px
+}
+
+.toc-tree__node--level_7 .toc-tree__anchor .toc-tree__title {
+    padding-left: 186px
+}
+
+.toc-tree__node--level_7 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 206px
+}
+
+.toc-tree__node--level_7 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 226px
+}
+
+.toc-tree__node--level_7 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 246px
+}
+
+.toc-tree__node--level_7 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 266px
+}
+
+.toc-tree__node--level_7 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 286px
+}
+
+.toc-tree__node--level_7 .toc-tree__expander {
+    left: 143px
+}
+
+.toc-tree__node--level_8 .toc-tree__title {
+    padding-left: 186px
+}
+
+.toc-tree__node--level_8 .toc-tree__anchor .toc-tree__title {
+    padding-left: 206px
+}
+
+.toc-tree__node--level_8 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 226px
+}
+
+.toc-tree__node--level_8 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 246px
+}
+
+.toc-tree__node--level_8 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 266px
+}
+
+.toc-tree__node--level_8 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 286px
+}
+
+.toc-tree__node--level_8 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 306px
+}
+
+.toc-tree__node--level_8 .toc-tree__expander {
+    left: 163px
+}
+
+.toc-tree__node--level_9 .toc-tree__title {
+    padding-left: 206px
+}
+
+.toc-tree__node--level_9 .toc-tree__anchor .toc-tree__title {
+    padding-left: 226px
+}
+
+.toc-tree__node--level_9 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 246px
+}
+
+.toc-tree__node--level_9 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 266px
+}
+
+.toc-tree__node--level_9 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 286px
+}
+
+.toc-tree__node--level_9 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 306px
+}
+
+.toc-tree__node--level_9 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 326px
+}
+
+.toc-tree__node--level_9 .toc-tree__expander {
+    left: 183px
+}
+
+.toc-tree__node--level_10 .toc-tree__title {
+    padding-left: 226px
+}
+
+.toc-tree__node--level_10 .toc-tree__anchor .toc-tree__title {
+    padding-left: 246px
+}
+
+.toc-tree__node--level_10 .toc-tree__anchor .toc-tree__anchor-title--level_1 {
+    padding-left: 266px
+}
+
+.toc-tree__node--level_10 .toc-tree__anchor .toc-tree__anchor-title--level_2 {
+    padding-left: 286px
+}
+
+.toc-tree__node--level_10 .toc-tree__anchor .toc-tree__anchor-title--level_3 {
+    padding-left: 306px
+}
+
+.toc-tree__node--level_10 .toc-tree__anchor .toc-tree__anchor-title--level_4 {
+    padding-left: 326px
+}
+
+.toc-tree__node--level_10 .toc-tree__anchor .toc-tree__anchor-title--level_5 {
+    padding-left: 346px
+}
+
+.toc-tree__node--level_10 .toc-tree__expander {
+    left: 203px
 }

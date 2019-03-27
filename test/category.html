@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="../templates/css/toc-tree.css" />
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0" id="__SVG_SPRITE_NODE__">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 5.249" id="angle-down">
+            <path fill="currentColor" d="M0 .75C0 .67.03.6.09.54L.54.09C.6.03.67 0 .75 0s.146.03.207.09L4.5 3.634 8.044.09c.06-.06.13-.09.207-.09s.148.03.21.09l.45.45c.06.06.09.13.09.21s-.03.146-.09.206L4.708 5.158c-.06.06-.13.09-.208.09s-.147-.03-.208-.09L.09.956C.03.896 0 .826 0 .75z">
+            </path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.998 20" id="search">
+            <path fill="currentColor" d="M19.998,18.426l-4.386-4.374c1.156-1.477,1.848-3.332,1.848-5.346c0-4.8-3.917-8.706-8.73-8.706  C3.917,0,0,3.906,0,8.706c0,4.8,3.917,8.706,8.729,8.706c1.991,0,3.827-0.669,5.297-1.792L18.42,20L19.998,18.426z M8.729,15.186  c-3.583,0-6.498-2.907-6.498-6.48c0-3.573,2.915-6.479,6.498-6.479c3.583,0,6.498,2.906,6.498,6.479  C15.228,12.279,12.313,15.186,8.729,15.186z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.414 18.415" id="close">
+            <g>
+                <path d="M1.414,18.415L0,17L17,0l1.414,1.415L1.414,18.415z"></path>
+                <path d="M17,18.415L18.414,17l-17-17L0,1.415L17,18.415z"></path>
+            </g>
+        </symbol>
+    </svg>
+</head>
+<body>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+
+    <div id="container-1" class="nav">
+        <ul class="toc-tree">
+
+        </ul>
+
+    </div>
+
+    <script id="toc-tree__node" type="text/html">
+        <li class="toc-tree__node %nodeLevel%">
+            <div class="toc-tree__title-wrapper">
+                <a class="toc-tree__title toc-tree__title--have-childs toc-tree__title--link">%title%</a>
+                <!-- expander insert here -->
+                <!-- childes insert here -->
+            </div>
+        </li>
+    </script>
+
+    <script id="toc-tree__expander" type="text/html">
+        <div class="toc-tree__expander">
+            <svg class="toc-tree__expander-glyph">
+            <use xlink:href="#angle-down"></use>
+            </svg>
+            </div>
+    </script>
+
+    <script id="toc-tree__nodes-list" type="text/html">
+        <ul class="toc-tree__nodes-list">
+            <!-- childes insert here -->
+        </ul>
+    </script>
+
+    <script type="application/javascript">
+
+        const nodeListTemplate = $("script#toc-tree__nodes-list").text();
+        const nodeTemplate = $("script#toc-tree__node").text();
+        const expanderTemplate = $("script#toc-tree__expander").text();
+
+        $.when($.ajax("http://localhost:8081/api/categories/18")).then(
+            function(data, textStatus, jqXHR) {
+
+
+
+                text = assembleMenu(nodeListTemplate, nodeTemplate, expanderTemplate, data, 0);
+
+                $("#container-1 ul").append(text).ready(function(){
+                    $this = $(this);
+
+                    $(".toc-tree__expander").click(function() {
+                        $this.nextSibling().toggleClass("hide");
+                    })
+
+                    console.log(this);
+                });
+
+                console.log(text);
+
+                console.log(data);
+            },
+            function(jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR, textStatus, errorThrown);
+            }
+        )
+
+        $(document).ready(function(){
+
+            console.log($("script#template1").text());
+
+            //$("#container-1 ul").append(itemText.replace("%title%", "账号管理1").replace("<!-- expander insert here -->", expanderText));
+
+            console.log("hello, world");
+
+        })
+
+        function assembleMenu(nodeListTemplate, nodeTemplate, expanderTemplate, data, level) {
+
+            if (data.name != null) {
+                var text = nodeTemplate.replace("%title%", data.name);
+                text = text.replace("%nodeLevel%", "toc-tree__node--level_"+level);
+
+                if (Array.isArray(data.childCategories) && data.childCategories.length != 0) {
+                    text = text.replace("<!-- expander insert here -->", expanderTemplate);
+
+                    var childNodes = "";
+                    data.childCategories.forEach(function(category) {
+                        childNodes += assembleMenu(nodeListTemplate, nodeTemplate, expanderTemplate, category, level+1);
+                    })
+
+                    let nodeListText = nodeListTemplate.replace("<!-- childes insert here -->", childNodes);
+
+                    text = text.replace("<!-- childes insert here -->", nodeListText);
+
+                }
+
+                //console.log(text);
+            }
+
+            return text;
+        }
+
+    </script>
+</body>
+</html>

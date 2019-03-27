@@ -1,4 +1,5 @@
 .table {
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     background: #FFF;
@@ -6,6 +7,10 @@
     border-top: 1px solid #E1E6EB;
     margin-top: 8px;
     border: 1px solid #E1E6EB;
+}
+
+.table, .table * {
+    box-sizing: border-box;
 }
 
 .table tr {

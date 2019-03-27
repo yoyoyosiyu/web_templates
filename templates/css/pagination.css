@@ -1,3 +1,16 @@
+.pagination-container {
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.pagination-container * {
+    box-sizing: border-box;
+}
+
+.pagination-container .hide {
+    display: none;
+}
+
 .pagination-info {
     display: inline-block;
     vertical-align: middle;

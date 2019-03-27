@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分页样式表</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pagination.css">
+</head>
+<body>
+
+    <div>
+
+        <!-- 拷贝以下代码到页面中，并且添加样式表 pagination.css -->
+
+        <div class="pagination-container float-right">
+            <div class="pagination-info">
+                <span >共有3条</span>, <span >每页显示：15条</span>
+                <span class="hide">每页显示：<select class=""><option value="?" selected="selected"></option></select>条</span>
+            </div>
+            <ul class="pagination">
+                <!-- ngRepeat: page in pages -->
+                <li class="disabled">
+                    <a href="javascript:void(0)" >«</a>
+                </li>
+                <!-- end ngRepeat: page in pages -->
+                <li class="disabled">
+                    <a href="javascript:void(0)">‹</a>
+                </li>
+                <!-- end ngRepeat: page in pages -->
+                <li class="active">
+                    <a href="javascript:void(0)">1</a>
+                </li>
+                <!-- end ngRepeat: page in pages -->
+                <li class="">
+                    <a href="javascript:void(0)">2</a>
+                </li>
+                <!-- end ngRepeat: page in pages -->
+                <li class="disabled">
+                    <a href="javascript:void(0)">›</a>
+                </li>
+                <!-- end ngRepeat: page in pages -->
+                <li class="disabled">
+                    <a href="javascript:void(0)">»</a>
+                </li>
+                <!-- end ngRepeat: page in pages -->
+            </ul>
+            <span style="padding-left: 15px;padding-right: 15px" class="">
+                <input type="text" class="form-control" style="width: 40px; display: inline-block; padding-right: 5px">
+                <button class="btn btn-default" style="padding: 8px 8px;margin-left: 6px">GO</button>
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>
